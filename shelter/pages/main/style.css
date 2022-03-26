@@ -312,3 +312,67 @@ a {
   height: 6px;
   margin: 21px 17px;
 }
+
+.help {
+  width: 1280px;
+  max-height: 611px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.help__wrapper {
+  max-width: 75rem;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.help__content {
+  display: flex;
+  justify-content: center;
+}
+
+.help__title {
+  margin: 80px 0 60px;
+  max-width: 400px;
+  text-align: center;
+  color: #545454;
+  font-family: Georgia;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+
+.help__inner {
+  max-width: 75rem;
+  margin-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 55px 120px;
+  justify-content: center;
+}
+
+.help__box {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.help__box-image {
+  height: 60px;
+  width: 60px;
+}
+
+.help__box-title {
+  margin: 30px 0;
+  font-family: Georgia;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: #545454;
+}
