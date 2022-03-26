@@ -37,6 +37,7 @@ body {
 a {
   text-decoration: none;
 }
+
 .header {
   width: 100%;
   position: absolute;
@@ -47,6 +48,7 @@ a {
   display: flex;
   flex-direction: column;
 }
+
 .logo__title {
   color: var(--color-primary);
   font-family: var(--font-family-primary);
@@ -56,6 +58,7 @@ a {
   letter-spacing: 0.12rem;
   line-height: 110%;
 }
+
 .logo__subtitle {
   margin-top: 10px;
   color: var(--color-light-xl);
@@ -67,10 +70,12 @@ a {
   line-height: 110%;
   text-align: center;
 }
+
 .menu {
   display: flex;
   width: 447px;
 }
+
 .menu__list {
   display: flex;
   width: 100%;
@@ -172,7 +177,6 @@ a {
 .about__content {
   margin-top: 80px;
   display: flex;
-  /* flex-direction: row; */
   justify-content: space-between;
 }
 
@@ -297,7 +301,8 @@ a {
 }
 
 .card-button:hover {
-  background: var(--color-primary);
+  background: var(--color-primary-light);
+  border: 2px solid var(--color-primary-light);
   cursor: pointer;
 }
 
@@ -316,6 +321,11 @@ a {
   color: var(--color-dark-3xl);
 }
 
+.friends__button:hover {
+  background: var(--color-primary-light);
+  cursor: pointer;
+}
+
 .friends__button-arrow {
   margin-top: 31px;
   width: 52px;
@@ -323,6 +333,12 @@ a {
   border-radius: 100px;
   background: #fafafa;
   border: 2px solid var(--color-primary);
+}
+
+.friends__button-arrow:hover {
+  background: var(--color-primary-light);
+  border: 2px solid var(--color-primary-light);
+  cursor: pointer;
 }
 
 .arrow-left {
