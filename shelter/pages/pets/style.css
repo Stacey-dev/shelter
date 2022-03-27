@@ -1,0 +1,109 @@
+:root {
+  --color-primary: #f1cdb3;
+  --color-primary-light: #fddcc4;
+  --color-dark-l: #545454;
+  --color-dark-3xl: #292929;
+  --color-dark-xl: #4c4c4c;
+  --color-dark-s: #cdcdcd;
+  --color-light-xl: #ffffff;
+  --color-light-s: #fafafa;
+
+  --font-family-primary: 'Georgia', serif;
+  --font-family-secondary: 'Arial', sans-serif;
+  --font-weight-normal: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  /* width: 1280px; */
+}
+
+.wrapper {
+  max-width: 75rem;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+}
+
+.footer {
+  background: url(../../assets/images/noise_transparent.png),
+    radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
+    #211f20;
+}
+
+.footer__wrapper {
+  max-width: 75rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__content {
+  margin-top: 56px;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer__content-info {
+  margin-right: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer__content-title {
+  color: var(--color-light-xl);
+  font-family: var(--font-family-primary);
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+
+.footer__content-mail,
+.footer__content-phone,
+.footer__content-location {
+  height: 46px;
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.footer__content-mail:hover,
+.footer__content-phone:hover,
+.footer__content-location:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.footer__content-link {
+  color: var(--color-primary);
+  font-family: var(--font-family-primary);
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+}
+
+.footer__content-icon {
+  margin-right: 20px;
+}
+
+.footer__image {
+  margin-top: 40px;
+  width: 300px;
+  height: 310px;
+}
