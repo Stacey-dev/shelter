@@ -73,7 +73,7 @@ a {
 
 .menu {
   display: flex;
-  width: 447px;
+  width: 443px;
 }
 
 .menu__list {
@@ -181,7 +181,7 @@ a {
 }
 
 .about__image {
-  margin-left: 180px;
+  margin-left: 175px;
 }
 
 .about__content-inner {
@@ -230,8 +230,6 @@ a {
 .friends__inner {
   margin-top: 40px;
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: center;
 }
 
@@ -249,8 +247,8 @@ a {
 
 .friends__card {
   display: flex;
-  flex-direction: row;
   justify-content: center;
+  margin: 0 8px;
 }
 
 .card {
@@ -259,7 +257,6 @@ a {
   margin: 5px 45px;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   border-radius: 9px;
   background: #fafafa;
 }
@@ -269,12 +266,13 @@ a {
 }
 
 .card-image {
-  height: 270px;
+  padding-top: 20px;
+  height: 280px;
   width: 270px;
 }
 
 .card-title {
-  margin: 30px 0;
+  margin-top: 35px;
   font-family: var(--font-family-primary);
   font-weight: normal;
   font-size: 20px;
@@ -285,10 +283,9 @@ a {
 }
 
 .card-button {
-  /* margin-top: 30px; */
   width: 187px;
   height: 52px;
-  margin: 0 41.5px;
+  margin: 30px 41.5px 0;
   border-radius: 100px;
   background: #fafafa;
   border: 2px solid var(--color-primary);
@@ -307,7 +304,7 @@ a {
 }
 
 .friends__button {
-  margin-top: 70px;
+  margin-top: 69px;
   padding: 15px 44px;
   width: 261px;
   height: 52px;
@@ -328,7 +325,7 @@ a {
 }
 
 .friends__button-arrow {
-  margin-top: 31px;
+  margin-top: 211px;
   width: 52px;
   height: 52px;
   border-radius: 100px;
@@ -356,7 +353,7 @@ a {
 
 .help {
   width: 1280px;
-  max-height: 611px;
+  height: 611px;
   margin: 0 auto;
   background-color: var(--color-light-xl);
 }
@@ -390,12 +387,11 @@ a {
   margin-bottom: 100px;
   display: flex;
   flex-wrap: wrap;
-  gap: 55px 120px;
+  gap: 25px 120px;
   justify-content: center;
 }
 
 .help__box {
-  margin-right: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -419,7 +415,7 @@ a {
 }
 
 .donation {
-  height: 462px;
+  height: 464px;
   background-color: #f6f6f6;
 }
 
@@ -430,7 +426,7 @@ a {
 }
 
 .donation__image {
-  width: 505px;
+  width: 533px;
   height: 261px;
   margin-top: 92px;
   padding-right: 30px;
@@ -501,6 +497,7 @@ a {
 }
 
 .footer {
+  height: 350px;
   background: url(../../assets/images/noise_transparent.png),
     radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
     #211f20;
@@ -514,19 +511,21 @@ a {
 }
 
 .footer__content {
-  margin-top: 56px;
+  margin-top: 31px;
   display: flex;
-  flex-direction: row;
+  gap: 150px;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .footer__content-info {
-  margin-right: 160px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .footer__content-title {
+  margin-top: 26px;
   color: var(--color-light-xl);
   font-family: var(--font-family-primary);
   font-weight: normal;
@@ -535,13 +534,25 @@ a {
   letter-spacing: 0.06em;
 }
 
-.footer__content-mail,
-.footer__content-phone,
+.footer__content-mail {
+  height: 46px;
+  display: flex;
+  align-items: center;
+  margin-top: 31px;
+}
+
+.footer__content-phone {
+  height: 46px;
+  display: flex;
+  align-items: center;
+  margin-top: 27px;
+}
+
 .footer__content-location {
   height: 46px;
   display: flex;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 28px;
 }
 
 .footer__content-mail:hover,
@@ -552,6 +563,7 @@ a {
 }
 
 .footer__content-link {
+  margin-top: 5px;
   color: var(--color-primary);
   font-family: var(--font-family-primary);
   font-weight: normal;
@@ -565,7 +577,7 @@ a {
 }
 
 .footer__image {
-  margin-top: 40px;
+  margin: 7px 8px 0 15px;
   width: 300px;
   height: 310px;
 }
