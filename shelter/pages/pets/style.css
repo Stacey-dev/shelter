@@ -41,15 +41,14 @@ a {
 .header {
   width: 100%;
   height: 120px;
-  position: relative;
+  position: sticky;
   background-color: var(--color-light-xl);
-  /* top: 60px; */
+  top: 0;
+  left: 0;
 }
 
 .header__wrapper {
   padding-top: 30px;
-  position: sticky;
-  top: 0;
 }
 
 .header__logo {
@@ -132,9 +131,8 @@ a {
 }
 
 .friends__inner {
-  margin-top: 40px;
+  margin-top: 59px;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
@@ -151,15 +149,15 @@ a {
 }
 
 .friends__card {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px 40px;
 }
 
 .card {
   width: 270px;
   height: 435px;
-  margin: 15px 22px;
   display: flex;
   flex-direction: column;
   border-radius: 9px;
@@ -187,7 +185,6 @@ a {
 }
 
 .card-button {
-  /* margin-top: 30px; */
   width: 187px;
   height: 52px;
   margin: 0 41.5px;
@@ -209,7 +206,7 @@ a {
 }
 
 .slider__controls {
-  margin-top: 45px;
+  margin-top: 60px;
   display: flex;
 }
 
@@ -302,6 +299,7 @@ a {
 }
 
 .footer {
+  height: 350px;
   background: url(../../assets/images/noise_transparent.png),
     radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
     #211f20;
@@ -315,19 +313,21 @@ a {
 }
 
 .footer__content {
-  margin-top: 56px;
+  margin-top: 31px;
   display: flex;
-  flex-direction: row;
+  gap: 150px;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .footer__content-info {
-  margin-right: 160px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .footer__content-title {
+  margin-top: 26px;
   color: var(--color-light-xl);
   font-family: var(--font-family-primary);
   font-weight: normal;
@@ -336,13 +336,25 @@ a {
   letter-spacing: 0.06em;
 }
 
-.footer__content-mail,
-.footer__content-phone,
+.footer__content-mail {
+  height: 46px;
+  display: flex;
+  align-items: center;
+  margin-top: 31px;
+}
+
+.footer__content-phone {
+  height: 46px;
+  display: flex;
+  align-items: center;
+  margin-top: 27px;
+}
+
 .footer__content-location {
   height: 46px;
   display: flex;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 28px;
 }
 
 .footer__content-mail:hover,
@@ -353,6 +365,7 @@ a {
 }
 
 .footer__content-link {
+  margin-top: 5px;
   color: var(--color-primary);
   font-family: var(--font-family-primary);
   font-weight: normal;
@@ -366,7 +379,7 @@ a {
 }
 
 .footer__image {
-  margin-top: 40px;
+  margin: 7px 8px 0 15px;
   width: 300px;
   height: 310px;
 }
