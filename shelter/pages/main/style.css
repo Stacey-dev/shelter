@@ -5,6 +5,7 @@
   --color-dark-3xl: #292929;
   --color-dark-xl: #4c4c4c;
   --color-dark-s: #cdcdcd;
+  --color-light-l: #f6f6f6;
   --color-light-xl: #ffffff;
   --color-light-s: #fafafa;
 
@@ -215,7 +216,7 @@ a {
   height: 877px;
   display: flex;
   margin: 0 auto;
-  background-color: #f6f6f6;
+  background-color: var(--color-light-l);
 }
 
 .friends__wrapper {
@@ -224,7 +225,7 @@ a {
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  background-color: #f6f6f6;
+  background-color: var(--color-light-l);
 }
 
 .friends__inner {
@@ -416,7 +417,7 @@ a {
 
 .donation {
   height: 464px;
-  background-color: #f6f6f6;
+  background-color: var(--color-light-l);
 }
 
 .donation__content {
