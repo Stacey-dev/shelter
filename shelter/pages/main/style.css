@@ -21,6 +21,7 @@
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -92,13 +93,13 @@ a {
 }
 
 .menu__list-link {
-  color: var(--color-light-xl);
   font-family: var(--font-family-secondary);
   font-size: 15px;
   line-height: 160%;
 }
 
 .menu__list-link_active {
+  color: var(--color-light-s);
   border-bottom: 3px solid var(--color-primary);
 }
 
@@ -106,6 +107,10 @@ a {
   padding: 0 3px;
   color: var(--color-dark-s);
   border-bottom: 3px solid #f1cdb300;
+}
+
+.menu__list-link:hover {
+  color: var(--color-light-s);
 }
 
 .hero {
@@ -255,25 +260,25 @@ a {
 .card {
   width: 270px;
   height: 435px;
-  margin: 5px 45px;
+  margin: 20px 45px;
   display: flex;
   flex-direction: column;
   border-radius: 9px;
-  background: #fafafa;
+  background: var(--color-light-s);
 }
 
 .card:hover {
   cursor: pointer;
+  background: var(--color-light-xl);
 }
 
 .card-image {
-  padding-top: 20px;
-  height: 280px;
+  height: 269px;
   width: 270px;
 }
 
 .card-title {
-  margin-top: 35px;
+  margin-top: 30px;
   font-family: var(--font-family-primary);
   font-weight: normal;
   font-size: 20px;
@@ -288,7 +293,7 @@ a {
   height: 52px;
   margin: 30px 41.5px 0;
   border-radius: 100px;
-  background: #fafafa;
+  background: var(--color-light-s);
   border: 2px solid var(--color-primary);
   font-family: var(--font-family-primary);
   font-weight: normal;
@@ -298,14 +303,14 @@ a {
   color: var(--color-dark-3xl);
 }
 
-.card-button:hover {
+.card:hover .card-button {
   background: var(--color-primary-light);
   border: 2px solid var(--color-primary-light);
   cursor: pointer;
 }
 
 .friends__button {
-  margin-top: 69px;
+  margin-top: 39px;
   padding: 15px 44px;
   width: 261px;
   height: 52px;
@@ -330,7 +335,7 @@ a {
   width: 52px;
   height: 52px;
   border-radius: 100px;
-  background: #fafafa;
+  background: var(--color-light-l);
   border: 2px solid var(--color-primary);
 }
 

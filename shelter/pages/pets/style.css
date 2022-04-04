@@ -21,6 +21,7 @@
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -99,7 +100,7 @@ a {
 }
 
 .menu__list-link {
-  color: var(--color-dark-3xl);
+  color: var(--color-dark-l);
   font-family: var(--font-family-secondary);
   font-size: 15px;
   line-height: 160%;
@@ -113,6 +114,11 @@ a {
   padding: 0 3px;
   color: var(--color-dark-l);
   border-bottom: 3px solid #f1cdb300;
+}
+
+.menu__list-link:hover {
+  /* border-bottom: 3px solid var(--color-primary); */
+  color: var(--color-dark-3xl);
 }
 
 .friends {
@@ -162,11 +168,12 @@ a {
   display: flex;
   flex-direction: column;
   border-radius: 9px;
-  background: #fafafa;
+  background: var(--color-light-s);
 }
 
 .card:hover {
   cursor: pointer;
+  background: var(--color-light-xl);
 }
 
 .card-image {
@@ -190,7 +197,7 @@ a {
   height: 52px;
   margin: 0 41.5px;
   border-radius: 100px;
-  background: #fafafa;
+  background: var(--color-light-s);
   border: 2px solid var(--color-primary);
   font-family: var(--font-family-primary);
   font-weight: normal;
@@ -200,7 +207,7 @@ a {
   color: var(--color-dark-3xl);
 }
 
-.card-button:hover {
+.card:hover .card-button {
   background: var(--color-primary-light);
   border: 2px solid var(--color-primary-light);
   cursor: pointer;
@@ -259,12 +266,6 @@ a {
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--color-dark-3xl);
-}
-
-.slider__control-current:hover {
-  background: var(--color-primary-light);
-  border: 2px solid var(--color-primary-light);
-  cursor: pointer;
 }
 
 .slider__control-active {
