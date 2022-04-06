@@ -544,7 +544,7 @@ a {
   height: 46px;
   display: flex;
   align-items: center;
-  margin-top: 31px;
+  margin-top: 28px;
 }
 
 .footer__content-phone {
@@ -569,6 +569,8 @@ a {
 }
 
 .footer__content-link {
+  display: flex;
+  align-items: center;
   margin-top: 5px;
   color: var(--color-primary);
   font-family: var(--font-family-primary);
