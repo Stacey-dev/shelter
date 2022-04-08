@@ -121,6 +121,10 @@ a {
   color: var(--color-dark-3xl);
 }
 
+.burger__menu {
+  display: none;
+}
+
 .friends {
   height: 1342px;
   display: flex;
@@ -386,4 +390,96 @@ a {
   margin: 7px 8px 0 15px;
   width: 300px;
   height: 310px;
+}
+
+@media screen and (max-width: 1279px) {
+  .wrapper {
+    margin: 0 3%;
+  }
+  .header__logo {
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    margin: 0 3%;
+  }
+  .header__logo {
+    margin-right: 9.48%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+  .burger__menu {
+    margin: 19px 53px 49px 0;
+    padding: 0;
+    display: block;
+    height: 22px;
+    width: 30px;
+    z-index: 15;
+    position: relative;
+    cursor: pointer;
+  }
+  .burger__menu span,
+  .burger__menu::before,
+  .burger__menu::after {
+    left: 0;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    transition: all 0.3s ease 0s;
+    background-color: #000000;
+  }
+  .burger__menu::before,
+  .burger__menu::after {
+    content: '';
+  }
+  .burger__menu::before {
+    top: 0;
+  }
+  .burger__menu::after {
+    bottom: 0;
+  }
+  .burger__menu span {
+    top: 50%;
+    transform: scale(1) translate(0px, -50%);
+  }
+  .burger__menu.active span {
+    transform: rotate(-90deg);
+    transition-duration: 0.25s;
+    background-color: #000000;
+  }
+  .burger__menu.active::before {
+    top: 50%;
+    transform: rotate(90deg) translateY(-10px);
+    transition-duration: 0.25s;
+    background-color: #000000;
+  }
+  .burger__menu.active::after {
+    top: 50%;
+    transform: rotate(90deg) translateY(10px);
+    transition-duration: 0.25s;
+    background-color: #000000;
+  }
+  .show {
+    width: 620px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    position: absolute;
+    z-index: 15;
+    top: 0;
+    right: 0;
+    background-color: #000000;
+    padding: 134px 0 463px 127px;
+  }
+  .show .header__nav-item {
+    margin: 0;
+  }
 }
