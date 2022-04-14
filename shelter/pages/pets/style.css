@@ -26,7 +26,6 @@
 
 body {
   margin: 0 auto;
-  /* width: 1280px; */
 }
 
 .wrapper {
@@ -97,11 +96,6 @@ a {
   display: flex;
   align-items: center;
 }
-
-/* .menu__list-item:nth-child(2) {
-  margin-right: 35px;
-  margin-left: 35px;
-} */
 
 .menu__list-link {
   color: var(--color-dark-l);
@@ -432,9 +426,6 @@ a {
 }
 
 @media screen and (max-width: 1160px) {
-  .footer {
-    height: 678px;
-  }
   .footer__content {
     flex-wrap: wrap;
     justify-content: center;
@@ -442,9 +433,15 @@ a {
   }
 }
 
+@media screen and (max-width: 1109px) {
+  .footer {
+    height: 678px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .wrapper {
-    margin: 0 3%;
+    margin: 0 4%;
   }
   .header__logo {
     margin-right: 9.48%;
@@ -454,14 +451,33 @@ a {
   }
   .friends__inner {
     height: 1365px;
-    margin-top: 30px;
+    margin-top: 29px;
   }
   .slider__controls {
     margin-top: 40px;
   }
+  .footer {
+    height: 639px;
+  }
+  .footer__content {
+    gap: 59px 40px;
+  }
+  .footer__content-info {
+    width: 300px;
+  }
+  .footer__content-title {
+    margin-top: 0;
+  }
+  .footer__image {
+    margin: 0 10px 0px 0;
+    width: 295px;
+  }
 }
 
 @media screen and (max-width: 767px) {
+  .wrapper {
+    margin: 0 3%;
+  }
   .header__wrapper {
     justify-content: flex-start;
   }
@@ -546,16 +562,22 @@ a {
   .show .menu__list-item:first-child {
     margin-top: 158px;
   }
+  .friends {
+    height: 1649px;
+  }
 }
 
 @media screen and (max-width: 700px) {
+  .friends__inner {
+    margin-top: 41px;
+  }
   .footer {
     height: 809px;
   }
   .footer__content {
     margin-top: 30px;
     flex-direction: column;
-    gap: 40px;
+    gap: 36px;
   }
   .footer__content-info {
     width: 278px;
@@ -565,13 +587,31 @@ a {
     font-size: 25px;
     text-align: center;
   }
+  .footer__content-location {
+    margin-top: 35px;
+    margin-left: -9px;
+    width: 300px;
+  }
   .footer__image {
     width: 260px;
     height: 269px;
   }
+  .footer__content-mail,
+  .footer__content-phone {
+    justify-content: center;
+  }
+  .footer__image {
+    width: 253px;
+    height: 269px;
+    margin: -1px 10px 0px 9px;
+  }
 }
 
 @media screen and (max-width: 360px) {
+  .friends__title {
+    margin-top: 42px;
+    font-size: 25px;
+  }
   .slider__controls {
     margin-top: 42px;
     margin-bottom: 42px;
