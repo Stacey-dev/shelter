@@ -257,14 +257,17 @@ a {
 
 .friends__card {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin: 0 8px;
+  overflow: hidden;
+  /* margin: 0 8px; */
+  gap: 0 90px;
 }
 
 .card {
   width: 270px;
   height: 435px;
-  margin: 20px 45px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   border-radius: 9px;
@@ -341,6 +344,14 @@ a {
   border-radius: 100px;
   background: var(--color-light-l);
   border: 2px solid var(--color-primary);
+}
+
+.friends__button-arrow:first-of-type {
+  margin-right: 53px;
+}
+
+.friends__button-arrow:last-of-type {
+  margin-left: 53px;
 }
 
 .friends__button-arrow:hover {
@@ -628,9 +639,29 @@ a {
     flex-wrap: wrap;
     justify-content: center;
   }
+  /* .friends__card {
+    overflow: hidden;
+  } */
+}
+
+@media screen and (max-width: 1230px) {
+  .friends__card {
+    gap: 0 40px;
+    /* margin-top: 40px;
+    display: flex;
+    justify-content: center; */
+    /* width: 620px;
+    height: 490px; */
+  }
 }
 
 @media screen and (max-width: 1160px) {
+  .friends__button-arrow:first-of-type {
+    margin-right: 12px;
+  }
+  .friends__button-arrow:last-of-type {
+    margin-left: 12px;
+  }
   .footer__content {
     flex-wrap: wrap;
     justify-content: center;
@@ -645,6 +676,10 @@ a {
 }
 
 @media screen and (max-width: 1094px) {
+  .friends__card {
+    width: 580px;
+    height: 455px;
+  }
   .help {
     height: 811px;
   }
@@ -811,6 +846,12 @@ a {
   }
 }
 
+@media screen and (max-width: 750px) {
+  .friends__card {
+    width: 270px;
+  }
+}
+
 @media screen and (max-width: 700px) {
   .footer {
     height: 811px;
@@ -957,5 +998,32 @@ a {
     margin-top: 42px;
     width: 260px;
     height: 354px;
+  }
+  .friends {
+    height: 791px;
+  }
+  .friends__title {
+    margin-top: 42px;
+    font-size: 25px;
+  }
+  .friends__inner {
+    margin-top: 20px;
+    position: relative;
+  }
+  .friends__button-arrow {
+    position: absolute;
+    margin: 0;
+    top: 475px;
+  }
+  .friends__button-arrow:first-of-type {
+    margin-right: 0;
+    left: 50px;
+  }
+  .friends__button-arrow:last-of-type {
+    margin-left: 0;
+    right: 50px;
+  }
+  .friends__button {
+    margin-top: 110px;
   }
 }
