@@ -27,7 +27,6 @@
 
 body {
   margin: 0 auto;
-  /* width: 1280px; */
 }
 
 .wrapper {
@@ -260,7 +259,6 @@ a {
   flex-wrap: wrap;
   justify-content: center;
   overflow: hidden;
-  /* margin: 0 8px; */
   gap: 0 90px;
 }
 
@@ -373,7 +371,6 @@ a {
 }
 
 .help {
-  /* width: 1280px; */
   height: 611px;
   margin: 0 auto;
   background-color: var(--color-light-xl);
@@ -419,7 +416,6 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* width: 170px; */
 }
 
 .help__box-image {
@@ -639,19 +635,11 @@ a {
     flex-wrap: wrap;
     justify-content: center;
   }
-  /* .friends__card {
-    overflow: hidden;
-  } */
 }
 
 @media screen and (max-width: 1230px) {
   .friends__card {
     gap: 0 40px;
-    /* margin-top: 40px;
-    display: flex;
-    justify-content: center; */
-    /* width: 620px;
-    height: 490px; */
   }
 }
 
