@@ -738,17 +738,23 @@ a {
 
 @media screen and (max-width: 768px) {
   .wrapper {
-    margin: 0 3%;
+    margin: 0 4%;
+  }
+  .header {
+    top: 30px;
   }
   .header__logo {
     margin-right: 9.48%;
+  }
+  .hero {
+    padding-top: 150px;
   }
   .hero__content-section {
     justify-content: flex-end;
   }
   .hero__content {
     padding-bottom: 100px;
-    margin-right: 108px;
+    margin-right: 124px;
   }
   .hero__content-btn {
     align-self: center;
@@ -757,9 +763,44 @@ a {
     width: 569px;
     height: 593px;
   }
+  .friends__button {
+    margin-top: 59px;
+  }
+  .help {
+    height: 779px;
+  }
+  .help__inner {
+    gap: 24px 60px;
+  }
+  .donation__content-card {
+    margin-top: 19px;
+  }
+  .donation__image {
+    width: 506px;
+    margin-right: 0;
+  }
+  .footer {
+    height: 639px;
+  }
+  .footer__content {
+    gap: 59px 40px;
+  }
+  .footer__content-info {
+    width: 300px;
+  }
+  .footer__content-title {
+    margin-top: 0;
+  }
+  .footer__image {
+    margin: 0 10px 0px 0;
+    width: 295px;
+  }
 }
 
 @media screen and (max-width: 767px) {
+  .wrapper {
+    margin: 0 3%;
+  }
   .header__wrapper {
     justify-content: flex-start;
   }
@@ -844,6 +885,18 @@ a {
   .show .menu__list-item:first-child {
     margin-top: 158px;
   }
+  .hero__content-btn {
+    margin-top: 41px;
+  }
+  .about__content-text:last-of-type {
+    margin-top: 21px;
+  }
+  .card {
+    margin-top: 21px;
+  }
+  .card-title {
+    margin-top: 31px;
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -854,12 +907,12 @@ a {
 
 @media screen and (max-width: 700px) {
   .footer {
-    height: 811px;
+    height: 809px;
   }
   .footer__content {
     margin-top: 30px;
     flex-direction: column;
-    gap: 40px;
+    gap: 36px;
   }
   .footer__content-info {
     width: 278px;
@@ -869,9 +922,15 @@ a {
     font-size: 25px;
     text-align: center;
   }
+  .footer__content-location {
+    margin-top: 35px;
+    margin-left: -11px;
+    width: 300px;
+  }
   .footer__image {
-    width: 260px;
+    width: 253px;
     height: 269px;
+    margin: -1px 10px 0px 9px;
   }
 }
 
@@ -949,11 +1008,13 @@ a {
     text-align: center;
   }
   .donation__content-subtitle {
-    letter-spacing: 0.02em;
+    margin-top: 23px;
+    letter-spacing: 0;
   }
   .donation__content-card {
     width: 281px;
     height: 43px;
+    margin-top: 23px;
   }
   .donation__content-link {
     margin-left: 15px;
@@ -968,6 +1029,10 @@ a {
     height: 135px;
     margin-top: 42px;
     margin-right: 0;
+  }
+  .footer__content-mail,
+  .footer__content-phone {
+    justify-content: center;
   }
 }
 
@@ -997,7 +1062,7 @@ a {
   .about__image {
     margin-top: 42px;
     width: 260px;
-    height: 354px;
+    height: 353px;
   }
   .friends {
     height: 791px;
@@ -1013,17 +1078,17 @@ a {
   .friends__button-arrow {
     position: absolute;
     margin: 0;
-    top: 475px;
+    top: 476px;
   }
   .friends__button-arrow:first-of-type {
     margin-right: 0;
-    left: 50px;
+    left: 43px;
   }
   .friends__button-arrow:last-of-type {
     margin-left: 0;
-    right: 50px;
+    right: 43px;
   }
   .friends__button {
-    margin-top: 110px;
+    margin-top: 115px;
   }
 }
