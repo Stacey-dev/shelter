@@ -562,9 +562,6 @@ a {
   .show .menu__list-item:first-child {
     margin-top: 158px;
   }
-  .friends {
-    height: 1649px;
-  }
 }
 
 @media screen and (max-width: 700px) {
@@ -607,11 +604,17 @@ a {
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 425px) {
+  .friends {
+    height: 1649px;
+  }
   .friends__title {
     margin-top: 42px;
     font-size: 25px;
   }
+}
+
+@media screen and (max-width: 360px) {
   .slider__controls {
     margin-top: 42px;
     margin-bottom: 42px;
