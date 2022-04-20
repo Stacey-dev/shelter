@@ -478,9 +478,6 @@ a {
   .wrapper {
     margin: 0 3%;
   }
-  /* .header__wrapper {
-    justify-content: flex-start;
-  } */
   .header__logo {
     margin-right: 43px;
   }
@@ -493,7 +490,7 @@ a {
     line-height: 160%;
   }
   .burger__menu {
-    margin: 19px 0 49px 0;
+    margin: 19px 42px 49px 0;
     padding: 0;
     display: block;
     height: 22px;
@@ -560,7 +557,7 @@ a {
   .header__logo-burger {
     margin: 0;
     position: fixed;
-    right: 100px;
+    right: 125px;
     z-index: 16;
     animation: slide-in 3s;
   }
@@ -580,7 +577,7 @@ a {
   }
   .show .menu__list-item,
   .hide .menu__list-item {
-    margin: 20px 0;
+    margin: 19px 0;
   }
   .show .menu__list-item:first-child,
   .hide .menu__list-item:first-child {
