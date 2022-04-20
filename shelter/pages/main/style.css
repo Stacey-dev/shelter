@@ -789,9 +789,9 @@ a {
   .wrapper {
     margin: 0 3%;
   }
-  .header__wrapper {
+  /* .header__wrapper {
     justify-content: flex-start;
-  }
+  } */
   .header__logo {
     margin-right: 43px;
   }
@@ -861,17 +861,47 @@ a {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    position: absolute;
+    position: fixed;
     z-index: 15;
     top: -60px;
     right: 0;
     background-color: var(--color-dark-3xl);
+    animation: slide-in 2.5s;
   }
-  .show .menu__list-item {
+  .header__logo-burger {
+    margin: 0;
+    position: fixed;
+    right: 100px;
+    z-index: 16;
+    animation: slide-in 3s;
+  }
+  .hide {
+    width: 320px;
+    height: 823px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    z-index: 15;
+    top: 0;
+    background-color: var(--color-dark-3xl);
+    animation: slide-out 2.5s;
+    transform: translateX(320px);
+  }
+  .show .menu__list-item,
+  .hide .menu__list-item {
     margin: 20px 0;
   }
-  .show .menu__list-item:first-child {
-    margin-top: 158px;
+  .show .menu__list-item:first-child,
+  .hide .menu__list-item:first-child {
+    margin-top: 248px;
+  }
+  .overlay {
+    background-color: rgba(41, 41, 41, 0.6);
+    height: 100%;
+    position: absolute;
+    width: 100%;
   }
   .hero__content-btn {
     margin-top: 41px;
@@ -1078,5 +1108,25 @@ a {
   }
   .friends__button {
     margin-top: 115px;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(520px);
   }
 }
