@@ -46,6 +46,7 @@ a {
   background-color: var(--color-light-xl);
   top: 0;
   left: 0;
+  z-index: 1;
 }
 
 .header__wrapper {
@@ -139,9 +140,11 @@ a {
 }
 
 .friends__inner {
+  height: 900px;
   margin-top: 59px;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 .friends__title {
@@ -156,11 +159,15 @@ a {
   letter-spacing: 0.06em;
 }
 
-.friends__card {
-  display: flex;
+.friends__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px 40px;
-  flex-wrap: wrap;
-  justify-content: center;
+  max-width: 100%;
+  position: relative;
+  top: 0;
+  right: 0;
+  transition: right 0.3s;
 }
 
 .card {
@@ -253,7 +260,7 @@ a {
 .slider__control-current {
   width: 52px;
   height: 52px;
-  padding: 12px 0 15px 19px;
+  padding-bottom: 3px;
   border-radius: 100px;
   background: var(--color-primary);
   border: 2px solid var(--color-primary);
@@ -264,7 +271,7 @@ a {
   line-height: 115%;
   display: flex;
   align-items: center;
-  text-align: center;
+  justify-content: center;
   letter-spacing: 0.06em;
   color: var(--color-dark-3xl);
 }
@@ -396,9 +403,6 @@ a {
   .header__logo {
     margin-right: auto;
   }
-  .friends__wrapper {
-    margin: 0 3%;
-  }
   .footer__wrapper {
     margin: 0 3%;
   }
@@ -420,8 +424,8 @@ a {
   .friends__inner {
     height: 1365px;
   }
-  .friends__card {
-    overflow: hidden;
+  .friends__cards {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -588,6 +592,15 @@ a {
     height: 100%;
     position: absolute;
     width: 100%;
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    height: 100vh;
+    width: 100vw; */
+  }
+  .friends__cards {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -614,7 +627,7 @@ a {
   .footer__content-location {
     margin-top: 35px;
     margin-left: -9px;
-    width: 300px;
+    width: 295px;
   }
   .footer__image {
     width: 260px;
@@ -642,6 +655,9 @@ a {
 }
 
 @media screen and (max-width: 360px) {
+  .burger__menu {
+    margin-right: 20px;
+  }
   .slider__controls {
     margin-top: 42px;
     margin-bottom: 42px;
