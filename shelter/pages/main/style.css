@@ -632,8 +632,10 @@ a {
 
 @media screen and (max-width: 1275px) {
   .hero__content-section {
-    flex-wrap: wrap;
+    margin: 0 auto;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 }
 
@@ -658,6 +660,9 @@ a {
 }
 
 @media screen and (max-width: 1109px) {
+  .hero__image {
+    margin-left: 0;
+  }
   .footer {
     height: 678px;
   }
@@ -853,7 +858,7 @@ a {
   }
   .show {
     width: 320px;
-    height: 823px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -874,7 +879,7 @@ a {
   }
   .hide {
     width: 320px;
-    height: 823px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -896,9 +901,12 @@ a {
   }
   .overlay {
     background-color: rgba(41, 41, 41, 0.6);
-    height: 100%;
-    position: absolute;
-    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
   }
   .hero__content-btn {
     margin-top: 41px;
@@ -986,7 +994,7 @@ a {
     justify-content: center;
   }
   .hero__content {
-    width: 300px;
+    width: 291px;
     margin: 0 auto;
     padding-bottom: 105px;
     align-items: center;
@@ -1052,6 +1060,12 @@ a {
 }
 
 @media screen and (max-width: 450px) {
+  .wrapper {
+    margin: 0 auto;
+  }
+  .burger__menu {
+    margin-right: 20px;
+  }
   .about {
     height: 974px;
   }
