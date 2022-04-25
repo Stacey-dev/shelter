@@ -241,7 +241,6 @@ a {
   margin-top: 40px;
   display: flex;
   justify-content: center;
-  overflow: hidden;
 }
 
 .friends__title {
@@ -392,7 +391,7 @@ a {
 
 .transition-right {
   animation-name: move-right;
-  animation-duration: 3s;
+  animation-duration: 2s;
 }
 
 @keyframes move-left {
@@ -406,7 +405,7 @@ a {
 
 .transition-left {
   animation-name: move-left;
-  animation-duration: 3s;
+  animation-duration: 2s;
 }
 
 .help {
@@ -766,6 +765,7 @@ a {
   z-index: 1;
   height: 100vh;
   width: 100vw;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1279px) {
@@ -775,7 +775,17 @@ a {
   .header__logo {
     margin-right: auto;
   }
-
+  .carousel__wrapper {
+    width: 580px;
+  }
+  .friends__carousel {
+    left: -580px;
+  }
+  .friends__cards {
+    width: 580px;
+    height: 455px;
+    gap: 0 40px;
+  }
   .footer__wrapper {
     margin: 0 3%;
   }
@@ -788,6 +798,22 @@ a {
   .footer__content-location {
     width: 300px;
   }
+  @keyframes move-right {
+    from {
+      left: -580px;
+    }
+    to {
+      left: -1160px;
+    }
+  }
+  @keyframes move-left {
+    from {
+      left: -580px;
+    }
+    to {
+      left: 0px;
+    }
+  }
 }
 
 @media screen and (max-width: 1275px) {
@@ -796,12 +822,6 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-}
-
-@media screen and (max-width: 1230px) {
-  .friends__card {
-    gap: 0 40px;
   }
 }
 
@@ -851,10 +871,6 @@ a {
 }
 
 @media screen and (max-width: 1094px) {
-  .friends__card {
-    width: 580px;
-    height: 455px;
-  }
   .help {
     height: 811px;
   }
@@ -1096,6 +1112,16 @@ a {
   .about__content-text:last-of-type {
     margin-top: 21px;
   }
+  .carousel__wrapper {
+    width: 270px;
+  }
+  .friends__carousel {
+    left: -270px;
+  }
+  .friends__cards {
+    width: 270px;
+    gap: 0;
+  }
   .card {
     margin-top: 21px;
   }
@@ -1130,11 +1156,21 @@ a {
   .popup__list-item {
     margin-top: 5px;
   }
-}
-
-@media screen and (max-width: 750px) {
-  .friends__card {
-    width: 270px;
+  @keyframes move-right {
+    from {
+      left: -270px;
+    }
+    to {
+      left: -540px;
+    }
+  }
+  @keyframes move-left {
+    from {
+      left: -270px;
+    }
+    to {
+      left: 0px;
+    }
   }
 }
 

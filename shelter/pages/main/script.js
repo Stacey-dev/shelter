@@ -155,11 +155,20 @@ function createPetsCards(list) {
 createPetsCards(petsData);
 
 function createElements(petsList) {
-  let tempArr = [];
   let str = '';
-  for (let i = 0; i < 3; i++) {
+  let cardsNumber;
+  if (document.body.clientWidth > 1279) {
+    cardsNumber = 3;
+  } else if (
+    document.body.clientWidth > 767 &&
+    document.body.clientWidth < 1280
+  ) {
+    cardsNumber = 2;
+  } else if (document.body.clientWidth < 768) {
+    cardsNumber = 1;
+  }
+  for (let i = 0; i < cardsNumber; i++) {
     let randomPet = Math.floor(Math.random() * 8);
-    tempArr.push(randomPet);
     str += `<div class="card" data-id="${petsList[randomPet].id}">
               <img class="card-image" src="${petsList[randomPet].img}" alt="${petsList[randomPet].name}">
               <h4 class="card-title">
@@ -174,17 +183,19 @@ function createElements(petsList) {
   return str;
 }
 
-const cards = document.querySelectorAll('.card');
-const cardsArray = Array.from(cards);
-cardsArray.forEach((elem) =>
-  elem.addEventListener('click', (event) => {
-    let petId = event.target.parentNode.dataset.id || event.target.dataset.id;
-    popup.classList.add('popup__show');
-    document.body.style.overflow = 'hidden';
-    document.body.prepend(overlay);
-    createPopup(petId);
-  })
-);
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.card');
+  const cardsArray = Array.from(cards);
+  cardsArray.forEach((elem) => elem.addEventListener('click', appendPopup));
+});
+
+function appendPopup(event) {
+  let petId = event.target.parentNode.dataset.id || event.target.dataset.id;
+  popup.classList.add('popup__show');
+  document.body.style.overflowY = 'hidden';
+  document.body.prepend(overlay);
+  createPopup(petId);
+}
 
 function createPopup(id) {
   const petInfo = `<img class="popup__image" src="${
@@ -222,5 +233,48 @@ overlay.addEventListener('click', closePopup);
 function closePopup() {
   popup.classList.remove('popup__show');
   overlay.remove();
-  document.body.style.overflow = 'scroll';
+  document.body.style.overflowY = 'scroll';
 }
+
+const moveLeft = () => {
+  carousel.classList.add('transition-left');
+  prevBtn.removeEventListener('click', moveLeft);
+  nextBtn.removeEventListener('click', moveRight);
+};
+
+const moveRight = () => {
+  carousel.classList.add('transition-right');
+  prevBtn.removeEventListener('click', moveLeft);
+  nextBtn.removeEventListener('click', moveRight);
+};
+
+prevBtn.addEventListener('click', moveLeft);
+nextBtn.addEventListener('click', moveRight);
+
+carousel.addEventListener('animationend', (animationEvent) => {
+  let changedItem;
+  if (animationEvent.animationName === 'move-right') {
+    carousel.classList.remove('transition-right');
+    changedItem = itemsRight;
+    itemsActive.innerHTML = itemsRight.innerHTML;
+  } else {
+    carousel.classList.remove('transition-left');
+    changedItem = itemsLeft;
+    itemsActive.innerHTML = itemsLeft.innerHTML;
+  }
+
+  changedItem.innerHTML = '';
+  changedItem.innerHTML += createElements(petsData);
+
+  prevBtn.addEventListener('click', moveLeft);
+  nextBtn.addEventListener('click', moveRight);
+});
+
+document.addEventListener('click', (event) => {
+  if (
+    event.target.classList.contains('card') ||
+    event.target.closest('.card')
+  ) {
+    appendPopup(event);
+  }
+});
