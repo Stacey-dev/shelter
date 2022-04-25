@@ -101,39 +101,18 @@
 				</h3>
 
 				<div class="friends__inner">
-					<button class="friends__button-arrow" type="button">
+					<button class="friends__button-arrow" id="prev-btn" type="button">
 						<img class="arrow-left" src="../../assets/icons/Arrow-left.svg" alt="">
 					</button>
-					<div class="friends__card">
-						<div class="card">
-							<img class="card-image" src="../../assets/images/pets-katrine.png" alt="Katrine">
-							<h4 class="card-title">
-								Katrine
-							</h4>
-							<button class="card-button" type="button">
-								Learn more
-							</button>
-						</div>
-						<div class="card">
-							<img class="card-image" src="../../assets/images/pets-jennifer.png" alt="Jennifer">
-							<h4 class="card-title">
-								Jennifer
-							</h4>
-							<button class="card-button" type="button">
-								Learn more
-							</button>
-						</div>
-						<div class="card">
-							<img class="card-image" src="../../assets/images/pets-woody.png" alt="Woody">
-							<h4 class="card-title">
-								Woody
-							</h4>
-							<button class="card-button" type="button">
-								Learn more
-							</button>
+					<div class="carousel__wrapper">
+						<div class="friends__carousel">
+							<div class="friends__cards" id="cards-left"></div>
+							<div class="friends__cards" id="cards-active"></div>
+							<div class="friends__cards" id="cards-right"></div>
 						</div>
 					</div>
-					<button class="friends__button-arrow" type="button">
+
+					<button class="friends__button-arrow" id="next-btn" type="button">
 						<img class="arrow-right" src="../../assets/icons/Arrow-right.svg" alt="">
 					</button>
 				</div>
@@ -141,8 +120,14 @@
 				<a class="friends__button" href="../pets/index.html">
 					Get to know the rest
 				</a>
-
 			</div>
+
+			<div class="popup">
+				<button class="popup__button">
+					<img class="popup__button-icon" src="../../assets/icons/icon-close.svg" alt=""></button>
+				<div class="popup__wrapper"></div>
+			</div>
+
 		</section>
 		<section class="help" id="help">
 			<div class="help__wrapper wrapper">
