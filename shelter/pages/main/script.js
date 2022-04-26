@@ -144,6 +144,9 @@ burgerIcon.addEventListener('click', () => {
   navigationMenu.classList.contains('show') ? close() : open();
 });
 
+const navItems = Array.from(navigationItems).forEach((elem) =>
+  elem.addEventListener('click', close)
+);
 overlay.addEventListener('click', close);
 
 function createPetsCards(list) {

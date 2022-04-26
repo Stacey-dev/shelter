@@ -106,6 +106,7 @@ const petsArray = [
 ];
 
 const burgerIcon = document.querySelector('.burger__menu');
+const header = document.querySelector('.header');
 const headerLogo = document.querySelector('.header__logo');
 const navigationMenu = document.querySelector('.menu__list');
 const navigationItems = document.querySelectorAll('.menu__list-item');
@@ -127,6 +128,7 @@ function open() {
   burgerIcon.classList.add('active');
   document.body.style.overflow = 'hidden';
   document.body.prepend(overlay);
+  header.classList.add('header__transparent');
 }
 
 function close() {
@@ -136,12 +138,16 @@ function close() {
   burgerIcon.classList.remove('active');
   overlay.remove();
   document.body.style.overflow = 'scroll';
+  header.classList.remove('header__transparent');
 }
 
 burgerIcon.addEventListener('click', () => {
   navigationMenu.classList.contains('show') ? close() : open();
 });
 
+const navItems = Array.from(navigationItems).forEach((elem) =>
+  elem.addEventListener('click', close)
+);
 overlay.addEventListener('click', close);
 
 let petsData = [...petsArray];
