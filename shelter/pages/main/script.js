@@ -127,7 +127,7 @@ function open() {
   navigationMenu.classList.add('show');
   headerLogo.classList.add('header__logo-burger');
   burgerIcon.classList.add('active');
-  document.body.style.overflow = 'hidden';
+  document.body.style.overflowY = 'hidden';
   document.body.prepend(overlay);
 }
 
@@ -137,7 +137,7 @@ function close() {
   headerLogo.classList.remove('header__logo-burger');
   burgerIcon.classList.remove('active');
   overlay.remove();
-  document.body.style.overflow = 'scroll';
+  document.body.style.overflowY = 'scroll';
 }
 
 burgerIcon.addEventListener('click', () => {
