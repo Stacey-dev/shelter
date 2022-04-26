@@ -438,7 +438,8 @@ a {
   left: 890px;
 }
 
-.popup__button:hover {
+.popup__button:hover,
+.popup__button-hover {
   background: var(--color-primary-light);
   border: 2px solid var(--color-primary-light);
   cursor: pointer;
@@ -515,6 +516,7 @@ a {
   z-index: 5;
   height: 100vh;
   width: 100vw;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1279px) {

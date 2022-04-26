@@ -149,6 +149,12 @@ const navItems = Array.from(navigationItems).forEach((elem) =>
   elem.addEventListener('click', close)
 );
 overlay.addEventListener('click', close);
+overlay.addEventListener('mouseover', () => {
+  closeBtn.classList.add('popup__button-hover');
+});
+overlay.addEventListener('mouseout', () => {
+  closeBtn.classList.remove('popup__button-hover');
+});
 
 let petsData = [...petsArray];
 let fullPetsList = [];
