@@ -287,11 +287,11 @@ lastPetsPage.addEventListener('click', (e) => {
 });
 
 function calculatePages() {
-  if (document.body.clientWidth > 1279) {
+  if (document.body.clientWidth > 1279 - 17) {
     totalPages = 6;
   } else if (
     document.body.clientWidth > 767 &&
-    document.body.clientWidth < 1280
+    document.body.clientWidth < 1280 - 17
   ) {
     totalPages = 8;
   } else if (document.body.clientWidth < 768) {
