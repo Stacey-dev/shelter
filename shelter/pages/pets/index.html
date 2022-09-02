@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../assets/fonts/georgia/stylesheet.css">
+	<link rel="stylesheet" href="../../assets/fonts/arial/stylesheet.css">
+	<link rel="stylesheet" href="style.css">
+	<title>Shelter</title>
+</head>
+
+<body>
+	<header class="header">
+		<div class="header__wrapper wrapper">
+			<a class="header__logo" href="../main/index.html">
+				<h1 class="logo__title">
+					Cozy House
+				</h1>
+				<h2 class="logo__subtitle">
+					Shelter for pets in Boston
+				</h2>
+			</a>
+			<nav class="menu">
+				<ul class="menu__list">
+					<li class="menu__list-item">
+						<a class="menu__list-link menu__list-link_disabled" href="../main/index.html">About the shelter</a>
+					</li>
+					<li class="menu__list-item">
+						<a class="menu__list-link menu__list-link_active" href="../pets/index.html">Our pets</a>
+					</li>
+					<li class="menu__list-item">
+						<a class="menu__list-link menu__list-link_disabled" href="../main/index.html#help">Help the shelter</a>
+					</li>
+					<li class="menu__list-item">
+						<a class="menu__list-link menu__list-link_disabled" href="#footer">Contacts</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="burger__menu">
+				<span></span>
+			</div>
+		</div>
+	</header>
+
+	<main class="main">
+		<section class="friends" id="our-friends">
+			<div class="friends__wrapper">
+
+				<h3 class="friends__title">
+					Our friends who <br>
+					are looking for a house
+				</h3>
+
+				<div class="friends__inner">
+					<div class="friends__cards">
+					</div>
+				</div>
+
+				<div class="slider__controls">
+					<button class="slider__control slider__control-first slider__control-disabled">&lt;&lt;</button>
+					<button class="slider__control slider__control-prev slider__control-disabled">&lt;</button>
+					<button class="slider__control slider__control-current">1</button>
+					<button class="slider__control slider__control-next slider__control-active">&gt;</button>
+					<button class="slider__control slider__control-last slider__control-active">&gt;&gt;</button>
+				</div>
+			</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer" id="footer">
+		<div class="footer__wrapper">
+			<div class="footer__content">
+				<div class="footer__content-info">
+					<h3 class="footer__content-title">
+						For questions and suggestions
+					</h3>
+					<div class="footer__content-mail">
+						<a class="footer__content-link" href="mailto:email@shelter.com"><img class="footer__content-icon mail"
+								src="../../assets/icons/footer-icon-email.svg" alt=""> email@shelter.com</a>
+					</div>
+					<div class="footer__content-phone">
+						<a class="footer__content-link" href="tel:+136745677554"><img class="footer__content-icon phone"
+								src="../../assets/icons/footer-icon-phone.svg" alt=""> +13 674 567 75 54</a>
+					</div>
+				</div>
+				<div class="footer__content-info">
+					<h3 class="footer__content-title">
+						We are waiting for your visit
+					</h3>
+					<div class="footer__content-location">
+						<a class="footer__content-link" href="https://goo.gl/maps/X6gBiFr8MWoGYoXj9" target="_blank"><img
+								class="footer__content-icon marker" src="../../assets/icons/footer-icon-marker.svg" alt=""> 1 Central
+							Street, Boston (entrance from the store)</a>
+					</div>
+					<div class="footer__content-location">
+						<a class="footer__content-link" href="https://goo.gl/maps/s84TAwehe5oVscY68" target="_blank"><img
+								class="footer__content-icon marker" src="../../assets/icons/footer-icon-marker.svg" alt=""> 18 South
+							Park,
+							London</a>
+					</div>
+				</div>
+				<img class="footer__image" src="../../assets/images/footer-puppy.png" alt="Puppy">
+			</div>
+		</div>
+	</footer>
+	<div class="popup">
+		<button class="popup__button">
+			<img class="popup__button-icon" src="../../assets/icons/icon-close.svg" alt=""></button>
+		<div class="popup__wrapper"></div>
+	</div>
+	<script src="script.js"></script>
+</body>
+
+</html>
